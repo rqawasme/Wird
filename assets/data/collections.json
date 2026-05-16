@@ -1,0 +1,32 @@
+[
+  {
+    "id": "duas_for_anxiety",
+    "name": "Duas for anxiety",
+    "description": "Prophetic supplications for moments of worry, grief, or distress.",
+    "tags": ["anxiety", "grief"],
+    "period": "anytime",
+    "durationMinutes": 5,
+    "steps": [
+      { "dhikrId": "anxiety_dua", "countOverride": null },
+      { "dhikrId": "hasbiyallah", "countOverride": null },
+      { "dhikrId": "al_ikhlas", "countOverride": 1 },
+      { "dhikrId": "al_falaq", "countOverride": 1 },
+      { "dhikrId": "an_nas", "countOverride": 1 }
+    ]
+  },
+  {
+    "id": "before_sleep",
+    "name": "Before sleep",
+    "description": "A short routine drawn from the Sunnah for ending the day in remembrance.",
+    "tags": ["before_sleep"],
+    "period": "beforeSleep",
+    "durationMinutes": 4,
+    "steps": [
+      { "dhikrId": "ayat_al_kursi", "countOverride": null },
+      { "dhikrId": "al_ikhlas", "countOverride": null },
+      { "dhikrId": "al_falaq", "countOverride": null },
+      { "dhikrId": "an_nas", "countOverride": null },
+      { "dhikrId": "before_sleep_dua", "countOverride": null }
+    ]
+  }
+]
