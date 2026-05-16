@@ -165,7 +165,7 @@ class _CollectionTile extends StatelessWidget {
                 children: [
                   if (collection.period != null)
                     _miniChip(context, _formatPeriod(collection.period!),
-                        emphasized: true),
+                        emphasized: true,),
                   for (final tag in collection.tags)
                     _miniChip(context, '#$tag'),
                 ],
@@ -193,7 +193,7 @@ class _CollectionTile extends StatelessWidget {
   }
 
   Widget _miniChip(BuildContext context, String label,
-      {bool emphasized = false}) {
+      {bool emphasized = false,}) {
     final m = context.mihrab;
     final theme = Theme.of(context);
     return Container(

@@ -48,9 +48,9 @@ void main() {
     test('multi-source: duplicates are deduped, both sources noted', () {
       final adhkar = {'a': _d('a'), 'b': _d('b'), 'c': _d('c')};
       final w1 = _w('w1',
-          const [WirdStep(dhikrId: 'a'), WirdStep(dhikrId: 'b')]);
+          const [WirdStep(dhikrId: 'a'), WirdStep(dhikrId: 'b')],);
       final w2 = _w('w2',
-          const [WirdStep(dhikrId: 'b'), WirdStep(dhikrId: 'c')]);
+          const [WirdStep(dhikrId: 'b'), WirdStep(dhikrId: 'c')],);
       final merged = mergeWirds(wirds: [w2, w1], adhkar: adhkar);
       // sorted by id: w1 then w2
       expect(merged.sourceWirds.map((w) => w.id).toList(), ['w1', 'w2']);
@@ -85,7 +85,7 @@ void main() {
         'q3': _d('q3', count: 3, group: 'quls'),
       };
       final w1 = _w('w1',
-          const [WirdStep(dhikrId: 'q1'), WirdStep(dhikrId: 'q2'), WirdStep(dhikrId: 'q3')]);
+          const [WirdStep(dhikrId: 'q1'), WirdStep(dhikrId: 'q2'), WirdStep(dhikrId: 'q3')],);
       final merged = mergeWirds(wirds: [w1], adhkar: adhkar);
       expect(merged.steps, hasLength(1));
       expect(merged.steps.first.groupMembers.length, 3);

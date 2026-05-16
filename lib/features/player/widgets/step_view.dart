@@ -60,7 +60,7 @@ class StepView extends StatelessWidget {
                 children: [
                   Icon(Icons.auto_awesome_outlined,
                       size: 18,
-                      color: m.playerOnBackground.withValues(alpha: 0.7)),
+                      color: m.playerOnBackground.withValues(alpha: 0.7),),
                   const SizedBox(width: 10),
                   Expanded(
                     child: Text(

@@ -46,7 +46,7 @@ class NotificationsSection extends ConsumerWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        _Header('NOTIFICATIONS'),
+        const _Header('NOTIFICATIONS'),
         const SizedBox(height: 10),
         Container(
           decoration: BoxDecoration(
@@ -99,7 +99,7 @@ class NotificationsSection extends ConsumerWidget {
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  _Header('COLLECTION REMINDERS'),
+                  const _Header('COLLECTION REMINDERS'),
                   const SizedBox(height: 8),
                   for (final sel in enabled) ...[
                     _TimeRow(

@@ -38,12 +38,12 @@ class AboutSection extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Text('Version',
-                        style: theme.textTheme.bodyLarge),
+                        style: theme.textTheme.bodyLarge,),
                   ),
                   Text(_version,
                       style: theme.textTheme.bodyMedium?.copyWith(
                         color: m.mutedForeground,
-                      )),
+                      ),),
                 ],
               ),
               const SizedBox(height: 10),

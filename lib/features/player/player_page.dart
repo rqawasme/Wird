@@ -216,7 +216,7 @@ class _PlayerPageState extends ConsumerState<PlayerPage> {
             total: total,
             onClose: () async {
               if (await _confirmExit()) {
-                if (!mounted) return;
+                if (!context.mounted) return;
                 context.go('/');
               }
             },

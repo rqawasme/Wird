@@ -45,7 +45,7 @@ class _CompletionViewState extends State<CompletionView> {
           children: [
             const Spacer(),
             Icon(Icons.check_circle_outline,
-                size: 56, color: m.playerAccent),
+                size: 56, color: m.playerAccent,),
             const SizedBox(height: 20),
             Directionality(
               textDirection: TextDirection.rtl,

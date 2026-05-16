@@ -20,12 +20,12 @@ class WirdSourcesSection extends ConsumerWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        _Header(label: 'WIRD SOURCES'),
+        const _Header(label: 'WIRD SOURCES'),
         const SizedBox(height: 10),
         wirdsAsync.when(
           loading: () => const _Skeleton(),
           error: (e, _) => Text('Could not load: $e',
-              style: theme.textTheme.bodySmall),
+              style: theme.textTheme.bodySmall,),
           data: (wirds) => Column(
             children: [
               for (final w in wirds) ...[

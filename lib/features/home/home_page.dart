@@ -48,7 +48,7 @@ class HomePage extends ConsumerWidget {
             child: ListView(
               padding: const EdgeInsets.fromLTRB(20, 4, 20, 24),
               children: [
-                _Greeting(),
+                const _Greeting(),
                 const SizedBox(height: 16),
                 StreakStrip(streakDays: data.wirdStreak),
                 const SizedBox(height: 20),
@@ -163,7 +163,7 @@ class _EmptyWirdState extends StatelessWidget {
       child: Column(
         children: [
           Icon(Icons.menu_book_outlined,
-              size: 32, color: m.mutedForeground),
+              size: 32, color: m.mutedForeground,),
           const SizedBox(height: 12),
           Text(
             'No wird selected',
@@ -232,7 +232,7 @@ class _ErrorState extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Icon(Icons.error_outline,
-                size: 32, color: context.mihrab.mutedForeground),
+                size: 32, color: context.mihrab.mutedForeground,),
             const SizedBox(height: 12),
             Text(
               'Something went wrong',

@@ -1,4 +1,3 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../utils/streak_calculator.dart';
@@ -14,7 +13,7 @@ int wirdStreak(Ref ref) {
   final keys = entries
       .where((e) =>
           e.contentType == CompletionContentType.wird &&
-          e.contentId == kDailyWirdContentId)
+          e.contentId == kDailyWirdContentId,)
       .map((e) => e.dateKey);
   return calculateStreak(dateKeys: keys);
 }
@@ -26,7 +25,7 @@ int collectionStreak(Ref ref, String collectionId) {
   final keys = entries
       .where((e) =>
           e.contentType == CompletionContentType.collection &&
-          e.contentId == collectionId)
+          e.contentId == collectionId,)
       .map((e) => e.dateKey);
   return calculateStreak(dateKeys: keys);
 }
@@ -38,7 +37,7 @@ int collectionStreak(Ref ref, String collectionId) {
   final keys = entries
       .where((e) =>
           e.contentType == CompletionContentType.wird &&
-          e.contentId == kDailyWirdContentId)
+          e.contentId == kDailyWirdContentId,)
       .map((e) => e.dateKey);
   return thisMonthProgress(dateKeys: keys);
 }
@@ -49,7 +48,7 @@ int collectionStreak(Ref ref, String collectionId) {
   final keys = entries
       .where((e) =>
           e.contentType == CompletionContentType.collection &&
-          e.contentId == collectionId)
+          e.contentId == collectionId,)
       .map((e) => e.dateKey);
   return thisMonthProgress(dateKeys: keys);
 }
@@ -62,7 +61,7 @@ bool wirdDoneToday(Ref ref) {
   return entries.any((e) =>
       e.contentType == CompletionContentType.wird &&
       e.contentId == kDailyWirdContentId &&
-      e.dateKey == today);
+      e.dateKey == today,);
 }
 
 @riverpod
@@ -72,7 +71,7 @@ bool collectionDoneToday(Ref ref, String collectionId) {
   return entries.any((e) =>
       e.contentType == CompletionContentType.collection &&
       e.contentId == collectionId &&
-      e.dateKey == today);
+      e.dateKey == today,);
 }
 
 String _todayKey() {

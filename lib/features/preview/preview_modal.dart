@@ -41,7 +41,7 @@ class PreviewModal extends ConsumerWidget {
     Collection? collection,
   }) {
     assert((wird == null) != (collection == null),
-        'Provide either a wird or a collection');
+        'Provide either a wird or a collection',);
     final modal = wird != null
         ? PreviewModal.forWird(wird)
         : PreviewModal.forCollection(collection!);

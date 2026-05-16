@@ -25,13 +25,13 @@ class CollectionsSection extends ConsumerWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        _Header('COLLECTIONS'),
+        const _Header('COLLECTIONS'),
         const SizedBox(height: 10),
         collectionsAsync.when(
           loading: () => const SizedBox(
-              height: 56, child: Center(child: CircularProgressIndicator())),
+              height: 56, child: Center(child: CircularProgressIndicator()),),
           error: (e, _) => Text('Could not load: $e',
-              style: theme.textTheme.bodySmall),
+              style: theme.textTheme.bodySmall,),
           data: (collections) {
             final byId = {for (final c in collections) c.id: c};
             return Column(
@@ -59,7 +59,7 @@ class CollectionsSection extends ConsumerWidget {
                 ],
                 if (enabled.isNotEmpty) ...[
                   const SizedBox(height: 16),
-                  _Header('ORDER ON HOME'),
+                  const _Header('ORDER ON HOME'),
                   const SizedBox(height: 6),
                   _ReorderableList(
                     selections: enabled,
